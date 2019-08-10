@@ -26,11 +26,16 @@ mybatis:
  type-aliases-package: classpath:com.mqb.provider8001.providerdept.entity
 ---
 server:
- port: 7001
+ port: 8001
 spring:
- profiles: test
+ profiles: test  
  application:
   name: microservice-config-eureka-client
+ datasource:
+  driver-class-name: com.mysql.jdbc.Driver
+  url: jdbc:mysql://localhost:3306/dept02?useSSL=false&serverTimezone=UTC&useUnicode=true&characterEncoding=utf8
+  username: root
+  password: 666666
 eureka:
  instance:
   hostname: eureka-server7001.com
@@ -39,5 +44,8 @@ eureka:
   fetch-registry: false
   service-url:
    defaultZone: http://eureka-dev.com:7001/eureka/
+mybatis:
+ mapper-locations: classpath:mapper/*.xml
+ type-aliases-package: classpath:com.mqb.provider8001.providerdept.entity
 
 ##保存为utf-8格式
