@@ -37,7 +37,7 @@ spring:
   username: root
   password: 666666
 eureka:
- instance:
+ instance:  
   hostname: eureka-server7001.com
  client:
   register-with-eureka: false
